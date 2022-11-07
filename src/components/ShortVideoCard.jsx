@@ -1,5 +1,3 @@
-import { Avatar } from "antd";
-import moment from "moment";
 import React from "react";
 import styled from "styled-components";
 
@@ -7,7 +5,7 @@ const ShortVideoCard = ({ video }) => {
   return (
     <CardWrapper>
       <ImageWrapper>
-        <img src="/images/children.png" alt="children-img" />
+        <img src="" alt="children-img" />
       </ImageWrapper>
       <ContentWrapper>
         <h4>{video.title}</h4>

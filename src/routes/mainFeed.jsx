@@ -33,26 +33,6 @@ const MainFeed = () => {
             </>
           ))}
       </BodyWrapper>
-      {/* <Divider
-        style={{ height: "3px", color: "#e5e5e5", background: "#e5e5e5" }}
-      />
-      <h2>
-        <span>
-          <img
-            src="/images/streamtube-shorts.svg"
-            alt="streamtube-shorts"
-            width={30}
-            height={30}
-            style={{ marginRight: "10px" }}
-          />
-        </span>
-        <span>Shorts</span>
-      </h2>
-      <BodyWrapper>
-        {mockVideos.map((video) => (
-          <ShortVideoCard video={video} />
-        ))}
-      </BodyWrapper> */}
     </MainFeedWrapper>
   );
 };

@@ -1,4 +1,3 @@
-import { Avatar } from "antd";
 import moment from "moment";
 import React from "react";
 import styled from "styled-components";

@@ -1,5 +1,4 @@
 import { Button } from "antd";
-import React from "react";
 import { useContext } from "react";
 import styled from "styled-components";
 import { GlobalContext } from "../context/context";

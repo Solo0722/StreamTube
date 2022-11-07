@@ -1,7 +1,7 @@
 import { Button } from "antd";
 import React from "react";
 import styled from "styled-components";
-import { AiOutlineSearch } from "react-icons/ai";
+import { FiSearch } from "react-icons/fi";
 import Searchbar from "./Searchbar";
 import { Link } from "react-router-dom";
 
@@ -21,7 +21,7 @@ const MainNavbar = () => {
         type="primary"
         shape="circle"
         size={"small"}
-        icon={<AiOutlineSearch />}
+        icon={<FiSearch />}
         className="mobile-search-btn"
       />
     </NavWrapper>

@@ -1,7 +1,4 @@
-import React from "react";
-import { useState } from "react";
-import { useContext } from "react";
-import { useEffect } from "react";
+import { useState,useContext,useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import ChannelCard from "../components/ChannelCard";

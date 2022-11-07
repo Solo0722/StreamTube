@@ -1,5 +1,3 @@
-import { Avatar } from "antd";
-import moment from "moment";
 import React from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";

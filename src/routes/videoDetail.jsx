@@ -1,21 +1,16 @@
 import { Divider } from "antd";
 import moment from "moment";
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
-import { useContext } from "react";
+import { useState, useEffect } from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
 import ReactPlayer from "react-player";
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import ChannelCard from "../components/ChannelCard";
 import VideoCard from "../components/VideoCard";
-import { GlobalContext } from "../context/context";
 import { fetchDatFromAPI } from "../utils/fetchFromAPI";
 
 const VideoDetail = () => {
   const { videoId } = useParams();
-  const {} = useContext(GlobalContext);
   const [videoDetail, setVideoDetail] = useState([]);
   const [relatedVideos, setRelatedVideos] = useState([]);
 
