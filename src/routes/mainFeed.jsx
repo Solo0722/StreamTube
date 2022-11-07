@@ -1,14 +1,11 @@
 import { Divider } from "antd";
-import React from "react";
-import { useContext } from "react";
-import { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
 import ChannelCard from "../components/ChannelCard";
+import Searchbar from "../components/Searchbar";
 import SecondaryNavbar from "../components/SecondaryNavbar";
-import ShortVideoCard from "../components/ShortVideoCard";
 import VideoCard from "../components/VideoCard";
 import { GlobalContext } from "../context/context";
-import { mockVideos } from "../utils/data";
 import { fetchDatFromAPI } from "../utils/fetchFromAPI";
 
 const MainFeed = () => {
@@ -17,16 +14,19 @@ const MainFeed = () => {
   useEffect(() => {
     fetchDatFromAPI(`search?part=snippet&q=${searchQuery}`).then((data) => {
       setVideos(data.items);
-      console.log(data.items);
     });
-  }, [searchQuery]);
+  }, [searchQuery, setVideos]);
 
   return (
     <MainFeedWrapper>
+      <div className="long-search-bar">
+        <Searchbar />
+      </div>
       <SecondaryNavbar />
+      <Divider />
       <BodyWrapper>
-        {videos.length !== 0 &&
-          videos.map((item) => (
+        {videos?.length !== 0 &&
+          videos?.map((item) => (
             <>
               {item.id.videoId && <VideoCard video={item} />}
               {item.id.channelId && <ChannelCard channel={item} />}
@@ -61,6 +61,18 @@ const MainFeedWrapper = styled.div`
   width: 100%;
   height: 100%;
   padding: 1rem;
+
+  .long-search-bar {
+    display: none;
+  }
+
+  @media screen and (max-width: 500px) {
+    .long-search-bar {
+      display: flex;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
 `;
 
 const BodyWrapper = styled.div`

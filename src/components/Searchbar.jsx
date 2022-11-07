@@ -34,7 +34,7 @@ const Searchbar = () => {
 };
 
 const SearchWrapper = styled.div`
-  width: 70%;
+  width: 100%;
   height: 35px;
   display: flex;
   align-items: center;

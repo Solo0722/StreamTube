@@ -16,21 +16,9 @@ const VideoCard = ({
       <Link to={videoId ? `/video/${videoId}` : "/"}>
         <ImageWrapper>
           <img src={snippet?.thumbnails?.high?.url} alt={snippet?.title} />
-          <p>34:20</p>
         </ImageWrapper>
       </Link>
       <ContentWrapper>
-        <AvatarWrapper>
-          <Avatar
-            size={"small"}
-            style={{
-              color: "#fff",
-              backgroundColor: "#007FFF",
-            }}
-          >
-            U
-          </Avatar>
-        </AvatarWrapper>
         <DescriptionWrapper>
           <Link to={videoId ? `/video/${videoId}` : "/"}>
             <h4>
@@ -39,7 +27,9 @@ const VideoCard = ({
                 : snippet?.title}
             </h4>
           </Link>
-          <Link to={snippet?.channelId ? `/channel/${snippet?.channelId}` : "/"}>
+          <Link
+            to={snippet?.channelId ? `/channel/${snippet?.channelId}` : "/"}
+          >
             <small>
               {snippet?.channelTitle || "Demo channel"}
               <BsCheckCircleFill
@@ -64,8 +54,8 @@ const VideoCard = ({
 };
 
 const CardWrapper = styled.div`
-  width: 270px;
-  height: 270px;
+  width: 290px;
+  height: 290px;
   margin: 10px;
 `;
 
@@ -97,11 +87,8 @@ const ContentWrapper = styled.div`
   justify-content: space-between;
 `;
 
-const AvatarWrapper = styled.div`
-  width: 15%;
-`;
 const DescriptionWrapper = styled.div`
-  width: 85%;
+  width: 100%;
   height: 100%;
 
   h4 {

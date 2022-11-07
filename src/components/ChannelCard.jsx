@@ -34,8 +34,8 @@ const ChannelCard = ({ channel }) => {
 };
 
 const CardWrapper = styled.div`
-  width: 270px;
-  height: 270px;
+  width: 290px;
+  height: 290px;
   margin: 10px;
   display: flex;
   align-items: center;
