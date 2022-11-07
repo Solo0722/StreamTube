@@ -15,9 +15,9 @@ const SecondaryNavbar = () => {
             type="text"
             style={{
               backgroundColor: `${
-                searchQuery == tag.toLowerCase() ? "#000" : ""
+                searchQuery === tag.toLowerCase() ? "#000" : ""
               }`,
-              color: `${searchQuery == tag.toLowerCase() ? "#fff" : ""}`,
+              color: `${searchQuery === tag.toLowerCase() ? "#fff" : ""}`,
             }}
             onClick={() => setSearchQuery(tag.toLowerCase())}
           >
